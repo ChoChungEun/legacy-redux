@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { FETCH_ITEM_LIST } from "../constant/actionTypes";
 import { fetchItemList } from "../actions/itemActions";
 import DeleteButton from "./DeleteButton";
+import AddButton from "./AddButton";
 
 function ItemList() {
   const dispatch = useDispatch();
@@ -22,7 +23,17 @@ function ItemList() {
   console.log(items);
   return (
     <div align="center">
-      <h2 className="title">상품 목록</h2>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: 10,
+          gap: 10,
+        }}
+      >
+        <h2 className="title">목록</h2>
+        <AddButton />
+      </div>
       {items?.map((item) => (
         <div style={{ marginBottom: 10, borderBottom: "1px solid black" }}>
           <Link to={`/item/${item.id}`}>
@@ -33,7 +44,7 @@ function ItemList() {
             </div>
           </Link>
           <div>
-            <DeleteButton id={item.id}>삭제</DeleteButton>
+            <DeleteButton id={item.id} />
           </div>
         </div>
       ))}

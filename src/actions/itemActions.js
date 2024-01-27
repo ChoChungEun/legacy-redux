@@ -1,5 +1,8 @@
 import { createAction, handleActions } from "redux-actions";
 import {
+  ADD_SUCCESS,
+  ADD_FAILURE,
+  ADD_ITEM,
   DELETE_SUCCESS,
   DELETE_FAILURE,
   DELETE_ITEM,
@@ -10,6 +13,10 @@ import {
   FETCH_LIST_FAILURE,
   FETCH_ITEM_LIST,
 } from "../constant/actionTypes";
+
+export const addSuccess = createAction(ADD_SUCCESS, (id) => id);
+export const addFailure = createAction(ADD_FAILURE, (e) => e);
+export const addItem = createAction(ADD_ITEM, (data) => data);
 
 export const deleteSuccess = createAction(DELETE_SUCCESS, (id) => id);
 export const deleteFailure = createAction(DELETE_FAILURE, (e) => e);
@@ -40,6 +47,14 @@ const initialState = {
 
 const item = handleActions(
   {
+    [ADD_SUCCESS]: (state, action) => ({
+      ...state,
+      items: [action.payload, ...state.items],
+    }),
+    [ADD_FAILURE]: (state, action) => ({
+      ...state,
+      error: action.payload,
+    }),
     [DELETE_SUCCESS]: (state, action) => ({
       ...state,
       items: state.items.filter((item) => item.id !== action.payload),
