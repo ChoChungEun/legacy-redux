@@ -1,3 +1,7 @@
+export const UPDATE_SUCCESS = "item/UPDATE_SUCCESS";
+export const UPDATE_FAILURE = "item/UPDATE_FAILURE";
+export const UPDATE_ITEM = "item/UPDATE_ITEM";
+
 export const ADD_SUCCESS = "item/ADD_SUCCESS";
 export const ADD_FAILURE = "item/ADD_FAILURE";
 export const ADD_ITEM = "item/ADD_ITEM";

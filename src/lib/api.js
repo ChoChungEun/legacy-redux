@@ -7,3 +7,5 @@ export const fetchItemDetailApi = (itemId) =>
   axios.get(`${BASE_URL}/${itemId}`);
 export const delteItemApi = (itemId) => axios.delete(`${BASE_URL}/${itemId}`);
 export const addItemApi = (item) => axios.post(BASE_URL, item);
+export const updateItemApi = (item) =>
+  axios.put(`${BASE_URL}/${item.id}`, item.updateItem);

@@ -5,6 +5,7 @@ import { FETCH_ITEM_LIST } from "../constant/actionTypes";
 import { fetchItemList } from "../actions/itemActions";
 import DeleteButton from "./DeleteButton";
 import AddButton from "./AddButton";
+import UpdateButton from "./UpdateButton";
 
 function ItemList() {
   const dispatch = useDispatch();
@@ -20,7 +21,6 @@ function ItemList() {
 
   if (isLoading) return <p>Loading...</p>;
 
-  console.log(items);
   return (
     <div align="center">
       <div
@@ -33,6 +33,7 @@ function ItemList() {
       >
         <h2 className="title">목록</h2>
         <AddButton />
+        <UpdateButton />
       </div>
       {items?.map((item) => (
         <div style={{ marginBottom: 10, borderBottom: "1px solid black" }}>
