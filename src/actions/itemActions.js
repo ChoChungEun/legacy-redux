@@ -1,5 +1,8 @@
 import { createAction, handleActions } from "redux-actions";
 import {
+  DELETE_SUCCESS,
+  DELETE_FAILURE,
+  DELETE_ITEM,
   FETCH_DETAIL_SUCCESS,
   FETCH_DETAIL_FAILURE,
   FETCH_ITEM_DETAIL,
@@ -7,6 +10,10 @@ import {
   FETCH_LIST_FAILURE,
   FETCH_ITEM_LIST,
 } from "../constant/actionTypes";
+
+export const deleteSuccess = createAction(DELETE_SUCCESS, (id) => id);
+export const deleteFailure = createAction(DELETE_FAILURE, (e) => e);
+export const deleteItem = createAction(DELETE_ITEM, (id) => id);
 
 export const fetchDetailSuccess = createAction(
   FETCH_DETAIL_SUCCESS,
@@ -33,6 +40,14 @@ const initialState = {
 
 const item = handleActions(
   {
+    [DELETE_SUCCESS]: (state, action) => ({
+      ...state,
+      items: state.items.filter((item) => item.id !== action.payload),
+    }),
+    [DELETE_FAILURE]: (state, action) => ({
+      ...state,
+      error: action.payload,
+    }),
     [FETCH_DETAIL_SUCCESS]: (state, action) => ({
       ...state,
       item: action.payload,

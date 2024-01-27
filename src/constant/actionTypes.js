@@ -1,3 +1,7 @@
+export const DELETE_SUCCESS = "item/DELETE_SUCCESS";
+export const DELETE_FAILURE = "item/DELETE_FAILURE";
+export const DELETE_ITEM = "item/DELETE_ITEM";
+
 export const FETCH_DETAIL_SUCCESS = "item/FETCH_DETAIL_SUCCESS";
 export const FETCH_DETAIL_FAILURE = "item/FETCH_DETAIL_FAILURE";
 export const FETCH_ITEM_DETAIL = "item/FETCH_ITEM_DETAIL";
