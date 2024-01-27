@@ -1,7 +1,8 @@
 import { combineReducers } from "redux";
 import { all } from "redux-saga/effects";
-import item, { itemSaga } from "./item";
-import loading from "./loading";
+import { itemSaga } from "../sagas/index";
+import item from "../actions/itemActions";
+import loading from "../actions/loadingActions";
 
 const rootReducer = combineReducers({
   item,

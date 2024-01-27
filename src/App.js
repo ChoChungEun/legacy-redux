@@ -1,5 +1,5 @@
 import React from "react";
-import ItemList from "./components/itemList";
+import ItemList from "./components/ItemList";
 
 function App() {
   return <ItemList />;
