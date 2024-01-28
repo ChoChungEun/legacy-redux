@@ -62,7 +62,6 @@ const item = handleActions(
       ...state,
       items: state.items.map((item) => {
         if (item.id === action.payload.id) {
-          console.log("action.payload.updateItem", action.payload.updateItem);
           return action.payload.updateItem;
         } else {
           return item;

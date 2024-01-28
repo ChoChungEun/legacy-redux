@@ -6,14 +6,18 @@ import { fetchItemList } from "../actions/itemActions";
 import DeleteButton from "./DeleteButton";
 import AddButton from "./AddButton";
 import UpdateButton from "./UpdateButton";
+import { changeColor } from "../actions/colorChangeAction";
 
 function ItemList() {
   const dispatch = useDispatch();
 
-  const { items, isLoading } = useSelector(({ item, loading }) => ({
-    items: item.items,
-    isLoading: loading[FETCH_ITEM_LIST],
-  }));
+  const { items, isLoading, color } = useSelector(
+    ({ item, loading, color }) => ({
+      items: item.items,
+      isLoading: loading[FETCH_ITEM_LIST],
+      color: color.color,
+    })
+  );
 
   useEffect(() => {
     dispatch(fetchItemList());
@@ -21,8 +25,18 @@ function ItemList() {
 
   if (isLoading) return <p>Loading...</p>;
 
+  const handleColorChange = () => {
+    dispatch(changeColor("red"));
+  };
+
+  const fontColor = color;
+
+  console.log("fontColor", fontColor);
   return (
     <div align="center">
+      <button onClick={handleColorChange} style={{ color: fontColor }}>
+        Change Color
+      </button>
       <div
         style={{
           display: "flex",

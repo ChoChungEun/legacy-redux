@@ -1,3 +1,5 @@
+export const CHANGE_COLOR = "CHANGE_COLOR";
+
 export const UPDATE_SUCCESS = "item/UPDATE_SUCCESS";
 export const UPDATE_FAILURE = "item/UPDATE_FAILURE";
 export const UPDATE_ITEM = "item/UPDATE_ITEM";
