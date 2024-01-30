@@ -46,6 +46,8 @@ function ItemList() {
           gap: 10,
         }}
       >
+        <div>test</div>
+        <div>test</div>
         <h2 className="title">목록</h2>
         <AddButton />
         <UpdateButton />
