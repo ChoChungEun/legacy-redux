@@ -37,10 +37,6 @@ function ItemList() {
       <div>reset test2</div>
       <div>reset test3</div>
       <div>reset test4</div>
-      <div>reset test1</div>
-      <div>reset test2</div>
-      <div>reset test3</div>
-      <div>reset test4</div>
       <button onClick={handleColorChange} style={{ color: fontColor }}>
         Change Color
       </button>
