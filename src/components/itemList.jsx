@@ -61,6 +61,7 @@ function ItemList() {
           </Link>
           <div>
             <DeleteButton id={item.id} />
+            <div>commit c</div>
           </div>
         </div>
       ))}
