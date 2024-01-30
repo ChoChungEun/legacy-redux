@@ -42,13 +42,10 @@ function ItemList() {
       <button onClick={handleColorChange} style={{ color: fontColor }}>
         Change Color
       </button>
-<<<<<<< HEAD
       <div>a</div>
       <div>b</div>
       <div>c</div>
       <div>d</div>
-=======
->>>>>>> parent of 53dfdf7 (b)
       <div
         style={{
           display: "flex",
