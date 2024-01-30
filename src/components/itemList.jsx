@@ -31,9 +31,9 @@ function ItemList() {
 
   const fontColor = color;
 
-  console.log("fontColor", fontColor);
   return (
     <div align="center">
+      <div>reset test</div>
       <button onClick={handleColorChange} style={{ color: fontColor }}>
         Change Color
       </button>
