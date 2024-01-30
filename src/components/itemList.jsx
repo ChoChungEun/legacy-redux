@@ -33,7 +33,7 @@ function ItemList() {
 
   return (
     <div align="center">
-      <div>pull test</div>
+      <div>1</div>
       <button onClick={handleColorChange} style={{ color: fontColor }}>
         Change Color
       </button>
