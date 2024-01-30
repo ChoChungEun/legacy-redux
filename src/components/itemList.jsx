@@ -47,7 +47,6 @@ function ItemList() {
         <h2 className="title">목록</h2>
         <AddButton />
         <UpdateButton />
-        <div>commit b</div>
       </div>
       {items?.map((item) => (
         <div style={{ marginBottom: 10, borderBottom: "1px solid black" }}>
@@ -60,7 +59,6 @@ function ItemList() {
           </Link>
           <div>
             <DeleteButton id={item.id} />
-            <div>commit c</div>
           </div>
         </div>
       ))}
