@@ -35,6 +35,7 @@ function ItemList() {
   console.log("fontColor", fontColor);
   return (
     <div align="center">
+      <div>pull test</div>
       <button onClick={handleColorChange} style={{ color: fontColor }}>
         Change Color
       </button>
