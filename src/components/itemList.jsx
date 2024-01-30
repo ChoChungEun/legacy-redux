@@ -34,6 +34,8 @@ function ItemList() {
   return (
     <div align="center">
       <div>1</div>
+      <div>2</div>
+      <div>3</div>
       <button onClick={handleColorChange} style={{ color: fontColor }}>
         Change Color
       </button>
