@@ -31,8 +31,6 @@ function ItemList() {
 
   const fontColor = color;
 
-  console.log("color", color);
-  console.log("fontColor", fontColor);
   return (
     <div align="center">
       <div>pull test</div>
