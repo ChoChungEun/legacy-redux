@@ -33,7 +33,7 @@ function ItemList() {
 
   return (
     <div align="center">
-      <div>reset test</div>
+      <div>reset test1</div>
       <button onClick={handleColorChange} style={{ color: fontColor }}>
         Change Color
       </button>
