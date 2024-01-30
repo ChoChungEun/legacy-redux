@@ -33,19 +33,9 @@ function ItemList() {
 
   return (
     <div align="center">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
       <button onClick={handleColorChange} style={{ color: fontColor }}>
         Change Color
       </button>
-      <div>a</div>
-      <div>b</div>
-      <div>c</div>
-      <div>d</div>
       <div
         style={{
           display: "flex",
@@ -69,7 +59,6 @@ function ItemList() {
           </Link>
           <div>
             <DeleteButton id={item.id} />
-            <div>test</div>
           </div>
         </div>
       ))}
